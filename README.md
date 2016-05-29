@@ -9,6 +9,10 @@ well searching by ISBN as well as keywords.
 
      $ npm install amazon-book-search
 
+### Requirements
+    You will need an Amazon API key, secret and associate ID to use this service. For more information,
+    look at the Amazon Product Advertising API documentation.
+
 ### library 
 
     var amazonBookSearchSE = require('amazon-book-search-se');
