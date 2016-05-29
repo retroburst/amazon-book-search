@@ -1,20 +1,15 @@
 {
-  "name": "amazon-book-search",
-  "version": "0.0.10",
-  "description": "Code Challenge",
-  "main": "index.js",
+  "name": "amazon-book-search-se",
+  "version": "0.0.2",
+  "description": "Simple wrapper around apac to return book results from Amazon's Product Advertising API. Based on amazon-book-search by kuryaki.",
+  "main": "amazon-book-search-se.js",
   "scripts": {
-    "test": "mocha --ui tdd --reporter spec"
   },
-  "author": "David Roncancio",
+  "author": "Andrew D (retroburst) based on code by David Roncancio (kuryaki).",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "should": "~2.0.2",
-    "supertest": "~0.8.0"
   },
   "dependencies": {
-    "apac": "0.0.13",
-    "underscore": "~1.5.2",
-    "express": "~3.4.3"
+    "apac": "0.0.13"
   }
 }

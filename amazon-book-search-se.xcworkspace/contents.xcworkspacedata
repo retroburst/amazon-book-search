@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:index.js">
+      location = "group:/Users/retroburst/Development/amazon-book-search-se/amazon-book-search-se.js">
    </FileRef>
    <FileRef
       location = "group:lib">
@@ -12,8 +12,5 @@
    </FileRef>
    <FileRef
       location = "group:README.md">
-   </FileRef>
-   <FileRef
-      location = "group:test">
    </FileRef>
 </Workspace>
