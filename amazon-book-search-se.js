@@ -2,7 +2,7 @@
 var amazonSearchHelper = require('./lib/amazon-search-helper');
 
 function amazonBookSearch(settings){
-  if(!settings || !settings.awsKey || !settings.awsSecret){
+  if(!settings || !settings.awsKey || !settings.awsSecret || !settings.assocId){
     this.configured = false;
   } else {
     this.configured = true;
@@ -18,7 +18,7 @@ function amazonBookSearch(settings){
  */
 amazonBookSearch.prototype.search = function search(searchArguments, callback, page) {
   if(!this.configured){
-      callback({ message: 'amazonBookSearch must be configured correctly before use.' }, null);
+      callback({ message: 'Service must be configured correctly before use.' }, null);
       return;
   }
     
@@ -30,7 +30,12 @@ amazonBookSearch.prototype.search = function search(searchArguments, callback, p
   this.resultHandler = function(error, result){
       if(error){
             return callback(error, null);
-        };
+      };
+      
+      for(var i=0; i < result.results.length; i++){
+          console.log("result.results[" + i + "]", result.results[i].ItemAttributes);
+      }
+      
       callback(null, result);
     };
     

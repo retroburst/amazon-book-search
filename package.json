@@ -12,11 +12,15 @@
         "ISBN",
         "Amazon Product Adervitising API"
     ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/retroburst/amazon-book-search-se.git"
+    },
     "author": "Andrew D (retroburst) based on code by David Roncancio (kuryaki).",
     "license": "BSD-2-Clause",
     "devDependencies": {
     },
     "dependencies": {
-    "apac": "0.0.13"
+        "apac": "~2.0.0"
     }
 }
