@@ -24,6 +24,10 @@ ABS.prototype.search = function search(searchArguments, page, callback) {
 
   this.resultsHandler = function(error, results){
     if(error){callback(error, null);return};
+             console.log("results", results);
+                   console.log("results.results[0].ItemAttributes", results.results[0].ItemAttributes);
+                   console.log("results.results[0].ItemAttributes[0].EANList", results.results[0].ItemAttributes[0].EANList);
+      
     humanizer.transformResults(results, callback);
   };
   // TODO
