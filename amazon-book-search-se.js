@@ -31,11 +31,6 @@ amazonBookSearch.prototype.search = function search(searchArguments, callback, p
       if(error){
             return callback(error, null);
       };
-      
-      for(var i=0; i < result.results.length; i++){
-          console.log("result.results[" + i + "]", result.results[i].ItemAttributes);
-      }
-      
       callback(null, result);
     };
     
