@@ -29,13 +29,8 @@ amazonBookSearch.prototype.search = function search(searchArguments, callback, p
     
   this.resultHandler = function(error, result){
       if(error){
-            callback(error, null);
-            return;
+            return callback(error, null);
         };
-      console.log("result", result);
-      for(var i=0; i < result.results.length; i++){
-          console.log("result.results[" + i + "].ItemAttributes", result.results[i].ItemAttributes);
-      }
       callback(null, result);
     };
     
