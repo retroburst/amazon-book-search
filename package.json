@@ -1,7 +1,7 @@
 {
     "name": "amazon-book-search-se",
-    "version": "0.0.6",
-    "description": "Simple wrapper around apac to return book results from Amazon's Product Advertising API. Based on amazon-book-search by kuryaki.",
+    "version": "0.0.7",
+    "description": "Simple wrapper around apac to return book results from Amazon's Product Advertising API. Based on amazon-book-search by kuryaki. Uses apac version 2.0.0.",
     "main": "amazon-book-search-se.js",
     "scripts": {
     },
