@@ -13,7 +13,7 @@ well searching by ISBN as well as keywords.
     You will need an Amazon API key, secret and associate ID to use this service. For more information,
     look at the Amazon Product Advertising API documentation.
 
-### library 
+### Usage 
 
     var amazonBookSearchSE = require('amazon-book-search-se');
     var absse =  new amazonBookSearchSE({ awsKey: "YOUR KEY", awsSecret: "YOUR SECRET", assocId: "YOUR ASSOCIATE TAG" });
