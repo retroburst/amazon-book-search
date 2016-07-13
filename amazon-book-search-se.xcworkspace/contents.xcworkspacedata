@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:test.js">
+   </FileRef>
+   <FileRef
       location = "group:/Users/retroburst/Development/amazon-book-search-se/amazon-book-search-se.js">
    </FileRef>
    <FileRef

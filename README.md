@@ -6,7 +6,6 @@ This version does not humanize the results and returns them in original Amazon f
 well searching by ISBN as well as keywords.
 
 ### Install
-
      $ npm install amazon-book-search-se
 
 ### Requirements
@@ -14,7 +13,6 @@ well searching by ISBN as well as keywords.
     look at the Amazon Product Advertising API documentation.
 
 ### Usage 
-
     var amazonBookSearchSE = require('amazon-book-search-se');
     var absse =  new amazonBookSearchSE({ awsKey: "YOUR KEY", awsSecret: "YOUR SECRET", assocId: "YOUR ASSOCIATE TAG" });
 

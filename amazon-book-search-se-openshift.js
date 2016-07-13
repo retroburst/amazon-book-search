@@ -2,33 +2,31 @@
 var amazonSearchHelper = require('./lib/amazon-search-helper');
 
 /********************************************************
- * Constructs a new amazon book search object.
+ * Constructs an amazon book search object.
  ********************************************************/
 function amazonBookSearch(settings){
     if(!settings || !settings.awsKey || !settings.awsSecret || !settings.assocId){
         this.configured = false;
     } else {
         this.configured = true;
-        // configure the amazon search helper
+        // configure amazon search helper
         this.amazonSearchHelper = new amazonSearchHelper(settings);
     }
 }
 
 /********************************************************
- * Search function that will call Amazon APAC API
- * function via search helper.
+ * Search function - calls Amazon API via amazon 
+ * search helper.
  ********************************************************/
 amazonBookSearch.prototype.search = function search(searchArguments, callback, page) {
     if(!this.configured){
-      callback({ message: 'Service must be configured correctly before use.' }, null);
-      return;
+      return callback({ message: 'Service must be configured correctly before use.' }, null);
     }
 
     if(!searchArguments){
-      callback({ message: 'Search arguments must be specified.' }, null);
-      return;
+      return callback({ message: 'Search arguments must be specified.' }, null);
     }
-    
+
     // result handler callback
     this.resultHandler = function(error, result){
       if(error){
@@ -36,7 +34,8 @@ amazonBookSearch.prototype.search = function search(searchArguments, callback, p
       };
       callback(null, result);
     };
-    // call Amazon APAC API function via search helper
+    
+    // query the Amazon APAC API via the search helper
     this.amazonSearchHelper.query(searchArguments, this.resultHandler, page);
 };
 
